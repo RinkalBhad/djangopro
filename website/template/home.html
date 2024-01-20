@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about website</title>
+</head>
+<body>
+    <div class="container" style="text-align: center";>
+        {% include 'navbar.html' %}
+
+
+     <h1> this is our official website</h1>
+     <form action="home">
+<input type="text">
+<button>send</button>
+
+</form>
+
+     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A placeat mollitia
+         quasi rem! Deserunt, totam esse distinctio animi, at omnis expedita veniam 
+         sequi est nobis aliquam repellendus! Voluptatibus, in doloribus.</p>
+         <button>contact us</button>
+
+   {%  if isActive %}
+<div>
+
+    <h1>today date is {{date}}</h1>
+    <h1> name is {{name}}</h1>
+
+    <hr>
+
+    <h1>student data</h1>
+    <h2>student name:{{student.name}}</h2>
+    <h2>student collage:{{student.clg}}</h2>
+    <h2>student city:{{student.city}}</h2>
+
+
+    <hr>
+    <h1>favrite program</h1>
+    {% for p in program %}
+    <h3>{{p}}</h3>
+
+    {% endfor %}
+</div>
+    {% endif %}
+    </div>
+</body>
+</html>
