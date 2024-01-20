@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome</title>
+</head>
+<body bgcolor="blue">
+    <h1><center>welcome to this page</center></h1>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="username" value="{{data.username}}" name="username"><br></br>
+        <input type="text" placeholder="email"  value="{{data.email}}"  name="email"><br><br>
+
+        <input type="submit">
+    </form>
+    <a href="show">show</a>
+</body>
+</html>
