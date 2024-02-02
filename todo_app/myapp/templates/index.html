@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="lightblue">
+    <h1 align="center">TO DO LIST</h1>
+    
+        {% for i in data %}
+       <hr>
+         <h3 align="center">id:{{i.id}}</h3>
+         <h3 align="center"> Title:{{i.title}}</h3>
+         <h3 align="center">Details:{{i.details}}</h3>
+         <h3 align="center">Date:{{i.date}}</h3>
+         <h3 align="center">complated:{{i.complated}}</h3>
+           
+      
+      <hr>
+        {% endfor %}
+        
+        <h1 align="center">
+        <a  href="http://127.0.0.1:8000/insertdata/">Create</a><br>
+        <a href="http://127.0.0.1:8000/updatedata/1/">update</a><br>
+        <a href="http://127.0.0.1:8000/deletedata/2/">delete</a><br>
+        <a href="http://127.0.0.1:8000/">view</a>
+    </h1>
+</body>
+</html>
